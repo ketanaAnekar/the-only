@@ -1,0 +1,53 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: rgb(255, 255, 255);
+  font-family: "cofo-raffine", serif;
+  overflow: hidden;
+}
+
+/* MARQUEE */
+#marquee-wrapper {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #0064fb;
+  padding: 12px 0;
+  z-index: 20;
+  white-space: nowrap;
+}
+
+.marquee-inner {
+  display: inline-flex;
+  gap: 80px;
+  animation: marquee-move 14s linear infinite;
+  font-family: "futura-pt", sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 1.6rem;
+}
+
+/* MARQUEE animation */
+@keyframes marquee-move {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* CANVAS */
+canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+}
